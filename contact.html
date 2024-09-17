@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Background color */
+        }
+
+        header {
+            background-color: #ece035;
+            color: white;
+            padding: 10px 0px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            height: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h3 {
+            margin: 0;
+            font-style: italic;
+            
+        }
+
+
+        nav.nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+       
+        nav.nav-links a:hover {
+            
+            color: #34cd58;
+        }
+
+        .container2 {
+            width: 400px;
+            margin: 100px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .container2 h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .container2 p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .rating-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .rating {
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            gap: 5px;
+        }
+
+        .rating label {
+            height: 20px; 
+            display: block;
+            position: relative;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .rating label::after {
+            transition: all 0.4s ease-out;
+            position: absolute;
+            content: "☆";
+            color: #aaa;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .rating label:hover::after {
+            color: #888;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating input:checked + label::after,
+        .rating input:checked ~ label::after {
+            content: "★";
+            color: #f9bf3b;
+            text-shadow: 0 0 3px #f4c542;
+        }
+
+        .rating-text {
+            font-size: 16px;
+            color: #444;
+        }
+
+        textarea {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        input[type="email"], 
+        input[type="password"] {
+            width: calc(100% - 22px); 
+            height: 40px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #fa0f0f;
+            border: none;
+            border-radius: 5px;
+            font-size: medium;
+            color: #fff;
+            width: 90px;
+            height: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            color: rgb(174, 27, 27);
+        }
+
+        button:active {
+            background-color: #f1eeee;
+            color: rgb(253, 250, 250);
+        }
+
+        .social-icons {
+            text-align: center;
+            margin: 20px 0; /* Add margin to separate from other content */
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #555;
+            font-size: 1.5em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #f3440a;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h3><i>Your Top Source of Filipino Recipes</i></h3>
+        </div>
+        <nav class="nav-links">
+            <a href="webdev11.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container2">
+        <h2>Leave A Comment</h2>
+        <p>Have a question? Submit your question or comment below.</p>
+
+        <form>
+            <div class="rating-box">
+                <span class="rating-text">Recipe Rating</span>
+                <div class="rating">
+                    <!-- 1st star -->
+                    <input type="radio" name="rating" id="r1">
+                    <label for="r1"></label>
+                    <!-- 2nd Star -->
+                    <input type="radio" name="rating" id="r2">
+                    <label for="r2"></label>
+                    <!-- 3rd star -->
+                    <input type="radio" name="rating" id="r3">
+                    <label for="r3"></label>
+                    <!-- 4th star -->
+                    <input type="radio" name="rating" id="r4">
+                    <label for="r4"></label>
+                    <!-- 5th star -->
+                    <input type="radio" name="rating" id="r5">
+                    <label for="r5"></label>
+                </div>
+            </div>
+
+            <textarea name="comment" placeholder="Type your comment"></textarea><br>
+            <input type="email" placeholder="Email"/> 
+            <input type="password" placeholder="Password"/><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com/jesebelleruiz.castillo.9" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@jesecastillo2?_t=8pWJ83k1Fih&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@jesecastillo1479" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+</body>
+</html>
